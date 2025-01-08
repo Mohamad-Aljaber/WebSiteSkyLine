@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({ quickLinks }) => {
     event.preventDefault();
 
     const formData = new FormData();
-    formData.append("access_key", "425336b9-defe-434d-8cfd-add57fe9e769"); 
+    formData.append("access_key", "99e963cc-8628-41ac-9978-871a879f1530");
     formData.append("email", email);
 
     const response = await fetch("https://api.web3forms.com/submit", {
