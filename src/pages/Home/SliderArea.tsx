@@ -25,7 +25,7 @@ const SliderArea: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
               >
-                <div className="hero__caption">
+                <div className="hero__caption mt-70 pt-5">
                   <span
                     data-animation="fadeInLeft"
                     data-delay=".3s"

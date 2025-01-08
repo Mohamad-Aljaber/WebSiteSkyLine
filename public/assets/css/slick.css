@@ -16,10 +16,6 @@
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
-.hover-Effect:hover {
-  color: #f067ff;
-  text-decoration: "underline";
-}
 .typewriter-text {
   color: red;
   font-size: 40px;

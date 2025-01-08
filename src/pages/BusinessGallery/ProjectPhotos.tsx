@@ -12,7 +12,7 @@ const ProjectPhotos: React.FC = () => {
   ];
 
   return (
-    <aside className="single_sidebar_widget instagram_feeds">
+    <aside className="single_sidebar_widget instagram_feeds d-none d-lg-block">
       <h4
         className="widget_title"
         style={{ color: "#2d2d2d" }}

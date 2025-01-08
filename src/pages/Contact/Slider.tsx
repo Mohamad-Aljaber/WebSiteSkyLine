@@ -3,7 +3,6 @@ import React from "react";
 const Slider: React.FC = () => {
   return (
     <div className="slider-area slider-bg">
-      {/* Single Slider */}
       <div className="single-slider d-flex align-items-center slider-height3">
         <div className="container">
           <div className="row align-items-center justify-content-center">

@@ -12,7 +12,7 @@ const TagCloudWidget: React.FC = () => {
   ];
 
   return (
-    <aside className="single_sidebar_widget tag_cloud_widget">
+    <aside className="single_sidebar_widget tag_cloud_widget d-none d-lg-block">
       <h4
         className="widget_title"
         style={{ color: "#2d2d2d", marginBottom: "20px" }}

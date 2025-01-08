@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<FormData> = async data => {
     const requestData = {
-      access_key: "99e963cc-8628-41ac-9978-871a879f1530", 
+      access_key: "99e963cc-8628-41ac-9978-871a879f1530",
       name: data.name,
       email: data.email,
       subject: data.subject,
@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
 
       if (result.success) {
         alert("Message sent successfully!");
-        reset(); 
+        reset();
       } else {
         alert("Error sending message, please try again.");
       }
@@ -51,13 +51,13 @@ const ContactForm: React.FC = () => {
 
   return (
     <div
-      className="row container"
+      className=" row flex-column-reverse flex-lg-row container"
       style={{ margin: "100px auto", width: "80%" }}
     >
+      <div className="col-lg-8">
       <div className="col-12">
         <h2 className="contact-title">Get in Touch</h2>
       </div>
-      <div className="col-lg-8">
         <form
           className="form-contact contact_form"
           onSubmit={handleSubmit(onSubmit)}
