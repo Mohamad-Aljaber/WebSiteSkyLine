@@ -11,6 +11,14 @@ const SliderArea: React.FC = () => {
     deleteSpeed: 50,
     delaySpeed: 1000,
   });
+
+  const highlightText = (text: string) => {
+    return text.replace(
+      "Skyline",
+      "<span style='color: #F067FF;font-size:45px'>Skyline</span>"
+    );
+  };
+
   return (
     <div className="slider-area slider-bg">
       <div className="slider-active">
@@ -38,9 +46,10 @@ const SliderArea: React.FC = () => {
                     style={{
                       fontSize: "40px",
                     }}
-                  >
-                    {text}
-                  </h1>
+                    dangerouslySetInnerHTML={{
+                      __html: highlightText(text),
+                    }}
+                  ></h1>
 
                   <p
                     data-animation="fadeInLeft"
