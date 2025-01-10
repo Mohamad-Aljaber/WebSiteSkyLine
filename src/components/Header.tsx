@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-// تعريف نوع العناصر في القائمة
+import SplitButton from "./languageButtom";
+
 interface MenuItem {
   name: string;
   path: string;
@@ -51,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
                   </div>
                 </div>
 
-                <div className="col-6 d-flex justify-content-end d-lg-none">
+                <div className="col-6 d-flex justify-content-end align-items-center  d-lg-none">
                   <button
                     className="mobile-menu-toggle"
                     style={{
@@ -64,6 +65,7 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
                   >
                     <i className="fas fa-bars"></i>
                   </button>
+                  <SplitButton />
                 </div>
 
                 <div className="col-xl-10 col-lg-10 d-none d-lg-block">
@@ -86,6 +88,8 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
                         </ul>
                       </nav>
                     </div>
+
+                    <SplitButton />
                   </div>
                 </div>
 

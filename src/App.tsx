@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Outlet } from "react-router-dom";
 import BackToTop from "./components/GoToWhatsApp";
@@ -8,9 +7,6 @@ import "./i18n";
 const App = () => {
   const { t } = useTranslation();
 
-  useEffect(() => {
-    console.log("Current language: ", i18n.language);
-  }, [i18n.language]); 
 
   return (
     <>
