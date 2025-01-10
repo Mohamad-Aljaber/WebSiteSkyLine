@@ -32,7 +32,7 @@ export default function SplitButton() {
   };
 
   const handleMenuItemClick = (
-    event: React.MouseEvent<HTMLLIElement, MouseEvent>,
+    
     index: number
   ) => {
     setSelectedIndex(index);
@@ -129,7 +129,7 @@ export default function SplitButton() {
                       <MenuItem
                         key={option}
                         selected={index === selectedIndex}
-                        onClick={event => handleMenuItemClick(event, index)}
+                        onClick={() => handleMenuItemClick( index)}
                         sx={{ fontSize: "18px" }}
                       >
                         {option}

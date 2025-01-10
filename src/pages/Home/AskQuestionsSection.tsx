@@ -62,9 +62,9 @@ const AskQuestionsSection: React.FC = () => {
           </div>
         </div>
         <div className="row">
-          {questions.map(index => (
+          {questions.map((question,index) => (
             <motion.div
-              key={index }
+              key={question.question }
               className="col-lg-6 col-md-6"
               custom={index}
               initial="hidden"
