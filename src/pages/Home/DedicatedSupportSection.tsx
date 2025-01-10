@@ -3,8 +3,11 @@ import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import GppGoodIcon from "@mui/icons-material/GppGood";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const DedicatedSupportSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       className="about-area1 pb-bottom"
@@ -19,42 +22,30 @@ const DedicatedSupportSection: React.FC = () => {
               {/* Section Title */}
               <motion.div className="section-tittle section-tittle2 mb-30">
                 <h2 style={{ fontSize: "35px" }}>
-                  Building Systems for Enterprises
+                  {t("dedicatedSupport.title")}
                 </h2>
               </motion.div>
-              <p className="mb-40">
-                We specialize in building advanced systems for companies aiming
-                to enhance operations, improve management, and optimize
-                resources. Our solutions also integrate artificial intelligence
-                to boost decision-making and streamline processes.
-              </p>
+              <p className="mb-40">{t("dedicatedSupport.description")}</p>
               <ul className="mb-30">
                 <li>
                   <GppGoodIcon sx={{ fontSize: "25px", mr: 1 }} />
-
-                  <p>
-                    Advanced security protocols to protect your data and
-                    systems.
-                  </p>
+                  <p>{t("dedicatedSupport.points.security")}</p>
                 </li>
                 <li>
                   <ThumbUpAltIcon sx={{ fontSize: "25px", mr: 1 }} />
-                  <p>
-                    Building trust through reliable and transparent services.
-                  </p>
+                  <p>{t("dedicatedSupport.points.trust")}</p>
                 </li>
                 <li>
                   <VisibilityOffIcon sx={{ fontSize: "25px", mr: 1 }} />
-                  <p>
-                    Ensuring privacy and confidentiality of client information.
-                  </p>
+                  <p>{t("dedicatedSupport.points.privacy")}</p>
                 </li>
               </ul>
               <a
                 href="#"
                 className="btn"
               >
-                <i className="fas fa-phone-alt"></i> +352 681 555 826
+                <i className="fas fa-phone-alt"></i>{" "}
+                {t("dedicatedSupport.phoneNumber")}
               </a>
             </div>
           </div>

@@ -19,52 +19,56 @@ import engabd from "/assets/img/engabd.jpg";
 import engAbdulrahman from "/assets/img/engAbdulrahman.jpg";
 import engahmad from "/assets/img/engahmad.jpg";
 import engKhaled from "/assets/img/engKhaled.jpg";
-const testimonials = [
-  {
-    id: 1,
-    text: "I am Issa Al-Dabal, an IT engineer. I work on automating and managing work in the company to ensure the integration of efforts and providing services in the shortest possible time and in the best possible way.",
-    name: "Issa Al-Dabal",
-    role: "Engineer @Project Management",
-    avatar: engIssa,
-  },
-  {
-    id: 2,
-    text: "I am Sohaib Bakour, a software engineer. I work on managing company relations and marketing management in the various countries to which we provide our services with the best quality and lowest possible cost.",
-    name: "Sohaib Sherbaji",
-    role: "Engineer @Software Engineer",
-    avatar: engsuhaeb,
-  },
-  {
-    id: 3,
-    text: "I am Abdullah Al-Hussein, an IT engineer and a full-stack web developer. My team and I work on servers that enable users to see the applications and services we produce on their devices in a smooth and simple way.",
-    name: "Abdullah Al-Hussein",
-    role: "Engineer @Full-Stack && Servers",
-    avatar: engabd,
-  },
-  {
-    id: 4,
-    text: "I am Abdulrahman Al-Sarqabi, an IT engineer specialized in developing front-end interfaces in a sophisticated and advanced manner. My team and I have great artistic talents and distinctive ideas for developing front-end interfaces in various frameworks and modern programming languages.",
-    name: "Abdulrahman Al-Sarqabi",
-    role: "Engineer @Front-End",
-    avatar: engAbdulrahman,
-  },
-  {
-    id: 5,
-    text: "I am Ahmed Al-Dali, an IT engineer specialized in developing mobile applications in a sophisticated and advanced manner. My team and I have distinguished experience in developing mobile applications in various forms such as Android and IOS.",
-    name: "Ahmed Al-Dali",
-    role: "Engineer @Mobile Applications",
-    avatar: engahmad,
-  },
-  {
-    id: 6,
-    text: "I am Khaled Al-Abdullah, an IT engineer specializing in back-end development.I work with my team to program the processes that the user sees as forms on the front-end that the user interacts with. We have great skill in algorithms, automation and artificial intelligence.",
-    name: "Khaled Al-Abdullah",
-    role: "Engineer @Back-End",
-    avatar: engKhaled,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const PersonalCards = () => {
+  const { t } = useTranslation();
+
+  const testimonials = [
+    {
+      id: 1,
+      text: t("personalCards.testimonials.0.text"),
+      name: t("personalCards.testimonials.0.name"),
+      role: t("personalCards.testimonials.0.role"),
+      avatar: engIssa,
+    },
+    {
+      id: 2,
+      text: t("personalCards.testimonials.1.text"),
+      name: t("personalCards.testimonials.1.name"),
+      role: t("personalCards.testimonials.1.role"),
+      avatar: engsuhaeb,
+    },
+    {
+      id: 3,
+      text: t("personalCards.testimonials.2.text"),
+      name: t("personalCards.testimonials.2.name"),
+      role: t("personalCards.testimonials.2.role"),
+      avatar: engabd,
+    },
+    {
+      id: 4,
+      text: t("personalCards.testimonials.3.text"),
+      name: t("personalCards.testimonials.3.name"),
+      role: t("personalCards.testimonials.3.role"),
+      avatar: engAbdulrahman,
+    },
+    {
+      id: 5,
+      text: t("personalCards.testimonials.4.text"),
+      name: t("personalCards.testimonials.4.name"),
+      role: t("personalCards.testimonials.4.role"),
+      avatar: engahmad,
+    },
+    {
+      id: 6,
+      text: t("personalCards.testimonials.5.text"),
+      name: t("personalCards.testimonials.5.name"),
+      role: t("personalCards.testimonials.5.role"),
+      avatar: engKhaled,
+    },
+  ];
+
   const primaryTheme = "#2D0A31";
   const secondaryTheme = "#4c1e51";
 
@@ -76,7 +80,6 @@ const PersonalCards = () => {
         py: { xs: 5, sm: 7, md: 10 },
         pt: { xs: 10, sm: 12, md: 15 },
         color: "#fff",
-        
       }}
       id="aboutUs"
     >
@@ -164,7 +167,7 @@ const PersonalCards = () => {
                   sx={{
                     mb: { xs: 3, sx: 5 },
                     textAlign: "center",
-                    fontSize: { xs: "16px" },
+                    fontSize: { xs: "14px", sm: "16px" },
                     color: "#fff",
                   }}
                 >
@@ -191,12 +194,17 @@ const PersonalCards = () => {
                       sx={{
                         fontWeight: "bold",
                         color: "#fff",
-                        fontSize: "20px",
+                        fontSize: { xs: "16px", sm: "20px" },
                       }}
                     >
                       {testimonial.name}
                     </Typography>
-                    <Typography sx={{ color: "rgba(255, 255, 255, 0.6)" }}>
+                    <Typography
+                      sx={{
+                        color: "rgba(255, 255, 255, 0.6)",
+                        fontSize: { xs: "12px", sm: "16px" },
+                      }}
+                    >
                       {testimonial.role}
                     </Typography>
                   </Box>

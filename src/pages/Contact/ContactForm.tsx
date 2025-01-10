@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 type FormData = {
   message: string;
@@ -9,6 +10,8 @@ type FormData = {
 };
 
 const ContactForm: React.FC = () => {
+  const { t } = useTranslation();
+
   const {
     register,
     handleSubmit,
@@ -51,13 +54,13 @@ const ContactForm: React.FC = () => {
 
   return (
     <div
-      className=" row flex-column-reverse flex-lg-row container"
+      className="row flex-column-reverse flex-lg-row container"
       style={{ margin: "100px auto", width: "80%" }}
     >
       <div className="col-lg-8">
-      <div className="col-12">
-        <h2 className="contact-title">Get in Touch</h2>
-      </div>
+        <div className="col-12">
+          <h2 className="contact-title">{t("contact.title")}</h2>
+        </div>
         <form
           className="form-contact contact_form"
           onSubmit={handleSubmit(onSubmit)}
@@ -68,8 +71,8 @@ const ContactForm: React.FC = () => {
               <div className="form-group">
                 <textarea
                   className="form-control w-100"
-                  {...register("message", { required: "Message is required" })}
-                  placeholder="Enter Message"
+                  {...register("message", { required: t("contact.message") })}
+                  placeholder={t("contact.message")}
                   name="message"
                 />
                 {errors.message && <span>{errors.message.message}</span>}
@@ -80,8 +83,8 @@ const ContactForm: React.FC = () => {
                 <input
                   className="form-control"
                   type="text"
-                  {...register("name", { required: "Name is required" })}
-                  placeholder="Enter your name"
+                  {...register("name", { required: t("contact.name") })}
+                  placeholder={t("contact.name")}
                 />
                 {errors.name && <span>{errors.name.message}</span>}
               </div>
@@ -92,14 +95,14 @@ const ContactForm: React.FC = () => {
                   className="form-control"
                   type="email"
                   {...register("email", {
-                    required: "Email is required",
+                    required: t("contact.email.required"),
                     pattern: {
                       value:
                         /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
-                      message: "Invalid email address",
+                      message: t("contact.email.invalid"),
                     },
                   })}
-                  placeholder="Email"
+                  placeholder={t("contact.email.required")}
                 />
                 {errors.email && <span>{errors.email.message}</span>}
               </div>
@@ -109,8 +112,8 @@ const ContactForm: React.FC = () => {
                 <input
                   className="form-control"
                   type="text"
-                  {...register("subject", { required: "Subject is required" })}
-                  placeholder="Enter Subject"
+                  {...register("subject", { required: t("contact.subject") })}
+                  placeholder={t("contact.subject")}
                 />
                 {errors.subject && <span>{errors.subject.message}</span>}
               </div>
@@ -121,7 +124,7 @@ const ContactForm: React.FC = () => {
               type="submit"
               className="button button-contactForm boxed-btn"
             >
-              Send
+              {t("contact.send")}
             </button>
           </div>
         </form>
@@ -132,8 +135,8 @@ const ContactForm: React.FC = () => {
             <i className="ti-home"></i>
           </span>
           <div className="media-body">
-            <h3>İstanbul, Turkey.</h3>
-            <p>Beyoglu, 34433</p>
+            <h3>{t("contact.address.city")}</h3>
+            <p>{t("contact.address.address")}</p>
           </div>
         </div>
         <div className="media contact-info">
@@ -147,10 +150,10 @@ const ContactForm: React.FC = () => {
                 onMouseLeave={e => (e.currentTarget.style.color = "")}
                 href="https://wa.me/+31637718553"
               >
-                +316 377 185 53
+                {t("contact.phone.number")}
               </a>
             </h3>
-            <p>Mon to Fri 9am to 6pm</p>
+            <p>{t("contact.phone.hours")}</p>
           </div>
         </div>
         <div className="media contact-info">
@@ -164,10 +167,10 @@ const ContactForm: React.FC = () => {
                 onMouseEnter={e => (e.currentTarget.style.color = "#F067FF")}
                 onMouseLeave={e => (e.currentTarget.style.color = "")}
               >
-                skyline6710@gmail.com
+                {t("contact.email_contact.email")}
               </a>
             </h3>
-            <p>Send us your query anytime!</p>
+            <p>{t("contact.email_contact.note")}</p>
           </div>
         </div>
       </div>

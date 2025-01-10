@@ -16,10 +16,7 @@
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
-.typewriter-text {
-  color: red;
-  font-size: 40px;
-}
+
 .slick-list {
   position: relative;
 

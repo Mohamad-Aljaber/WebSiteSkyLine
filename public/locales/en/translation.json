@@ -1,0 +1,181 @@
+{
+  "welcome": "Welcome to React",
+  "menu": {
+    "home": "Home",
+    "business_gallery": "Business Gallery",
+    "help": "Help",
+    "contact": "Contact"
+  },
+  "slider": {
+    "title": "Skyline Business Technology Company",
+    "description": "The best company to promote your business and increase your profits",
+    "paragraph": "Enhance your organization with a strong and advanced information and media system that increases your customers' confidence in you. We also help you host your existing system and provide technical support as well.",
+    "button": "Start with us"
+  },
+  "services": "Our Services at Skyline",
+  "features": {
+    "ai": {
+      "title": "AI-Powered Systems Development",
+      "description": "Developing advanced AI-powered systems to meet your company's needs and enhance efficiency."
+    },
+    "automated": {
+      "title": "Automated Systems for Enterprises",
+      "description": "Providing automated systems tailored for organizations and enterprises, ensuring seamless operations."
+    },
+    "cloud": {
+      "title": "Cloud and Technical Services",
+      "description": "Enhancing your existing systems with cloud services and advanced technical solutions."
+    },
+    "security": {
+      "title": "Security Testing Team",
+      "description": "Our dedicated security team ensures the safety of your organization’s systems by conducting thorough security tests."
+    },
+    "consulting": {
+      "title": "Technology Consulting",
+      "description": "Expert consulting services from our specialized engineers to drive innovation in your organization."
+    },
+    "marketing": {
+      "title": "Marketing & Media Services",
+      "description": "Providing marketing and media solutions to enhance your company’s visibility and outreach."
+    },
+    "mobile": {
+      "title": "Mobile Application",
+      "description": "Designing and developing custom mobile applications for iOS and Android platforms to cater to your business needs and improve user engagement."
+    }
+  },
+  "about": {
+    "title": "Building Systems for Enterprises",
+    "description": "We specialize in building advanced systems for companies aiming to enhance operations, improve management, and optimize resources. Our solutions also integrate artificial intelligence to boost decision-making and streamline processes.",
+    "points": {
+      "systemDevelopment": "Develop advanced systems tailored for your business needs.",
+      "managementEfficiency": "Improve management efficiency with intelligent solutions.",
+      "aiOptimization": "Leverage AI to optimize resource allocation and decision-making."
+    }
+  },
+  "dedicatedSupport": {
+    "title": "Building Systems for Enterprises",
+    "description": "We specialize in building advanced systems for companies aiming to enhance operations, improve management, and optimize resources. Our solutions also integrate artificial intelligence to boost decision-making and streamline processes.",
+    "points": {
+      "security": "Advanced security protocols to protect your data and systems.",
+      "trust": "Building trust through reliable and transparent services.",
+      "privacy": "Ensuring privacy and confidentiality of client information."
+    },
+    "contactButton": "Contact Us",
+    "phoneNumber": "+352 681 555 826"
+  },
+  "askQuestions": {
+    "sectionTitle": "Frequently Asked Questions",
+    "sectionDescription": "At Skyline, we offer advanced technological and software solutions to empower your business. From AI-driven systems to cloud services, our expert team is ready to support you every step of the way.",
+    "questions": [
+      {
+        "question": "How can AI improve my company's operations?",
+        "answer": "Skyline's AI-driven systems help automate processes, optimize decision-making, and improve resource allocation, leading to more efficient and effective business operations."
+      },
+      {
+        "question": "What type of cloud services does Skyline offer?",
+        "answer": "We provide scalable cloud solutions designed to integrate seamlessly with your current systems, enhancing performance, security, and flexibility."
+      },
+      {
+        "question": "How does Skyline ensure data security?",
+        "answer": "Our solutions include advanced security protocols and regular system testing to safeguard your data and ensure privacy in all your business operations."
+      },
+      {
+        "question": "What kind of technological consulting does Skyline provide?",
+        "answer": "Our team of experts provides consulting services to help you choose and implement the right technological solutions to optimize your business and drive growth."
+      }
+    ],
+    "buttonText": "Go to Support"
+  },
+  "personalCards": {
+    "sectionTitle": "About Us",
+
+    "testimonials": [
+      {
+        "name": "Issa Al-Dabal",
+        "role": "Engineer @Project Management",
+        "text": "I am Issa Al-Dabal, an IT engineer. I work on automating and managing work in the company to ensure the integration of efforts and providing services in the shortest possible time and in the best possible way."
+      },
+      {
+        "name": "Sohaib Sherbaji",
+        "role": "Engineer @Software Engineer",
+        "text": "I am Sohaib Bakour, a software engineer. I work on managing company relations and marketing management in the various countries to which we provide our services with the best quality and lowest possible cost."
+      },
+      {
+        "name": "Abdullah Al-Hussein",
+        "role": "Engineer @Full-Stack && Servers",
+        "text": "I am Abdullah Al-Hussein, an IT engineer and a full-stack web developer. My team and I work on servers that enable users to see the applications and services we produce on their devices in a smooth and simple way."
+      },
+      {
+        "name": "Abdulrahman Al-Sarqabi",
+        "role": "Engineer @Front-End",
+        "text": "I am Abdulrahman Al-Sarqabi, an IT engineer specialized in developing front-end interfaces in a sophisticated and advanced manner. My team and I have great artistic talents and distinctive ideas for developing front-end interfaces in various frameworks and modern programming languages."
+      },
+      {
+        "name": "Ahmed Al-Dali",
+        "role": "Engineer @Mobile Applications",
+        "text": "I am Ahmed Al-Dali, an IT engineer specialized in developing mobile applications in a sophisticated and advanced manner. My team and I have distinguished experience in developing mobile applications in various forms such as Android and IOS."
+      },
+      {
+        "name": "Khaled Al-Abdullah",
+        "role": "Engineer @Back-End",
+        "text": "I am Khaled Al-Abdullah, an IT engineer specializing in back-end development.I work with my team to program the processes that the user sees as forms on the front-end that the user interacts with. We have great skill in algorithms, automation and artificial intelligence."
+      }
+    ]
+  },
+  "footer": {
+    "subscribeNewsletter": "Subscribe to Our Newsletter",
+    "stayUpdated": "Stay updated with our latest services and offerings by subscribing to our newsletter.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "contactUs": "Contact Us",
+    "footerCopyRight": "Copyright &copy; {{year}} All rights reserved | This template is made with <i class='fa fa-heart' aria-hidden='true'></i> by <a href='#' rel='noopener noreferrer'>SkyLine</a>",
+    "quickLinksList": [
+      { "name": "About Us", "to": "#aboutUs" },
+      { "name": "Business Gallery", "to": "/business-gallery" },
+      { "name": "FAQs", "to": "#help" },
+      { "name": "Services", "to": "#services" },
+      { "name": "Contact", "to": "/contact" }
+    ],
+    "servicesList": [
+      { "name": "AI-Powered Systems", "to": "/ai-powered-systems" },
+      { "name": "Cloud Services", "to": "/cloud-services" },
+      { "name": "Technical Support", "to": "/technical-support" },
+      { "name": "Technology Consulting", "to": "/technology-consulting" },
+      { "name": "Marketing & Media", "to": "/marketing-media" },
+      { "name": "Mobile Application", "to": "" }
+    ]
+  },
+  "Business": " Business Gallery",
+  "blog": {
+    "fsnCreditStoreTitle": "FSN Credit Store",
+    "fsnCreditStoreDescription": "A store for agents who provide credit recharge and mobile number reactivation services, where an integrated system is automated between FSN and the company’s authorized agents.",
+    "tawsellaStarTaxiTitle": "Tawsella StarTaxi management system with applications for user and driver",
+    "tawsellaStarTaxiDescription": "Mobile application (driver-user): A request is sent to obtain a service (transportation - car rental) from the company providing the services and enabling the driver to monitor the customer on the map. A chat can also be opened between the driver and the user. Control panel: To manage drivers and users and monitor drivers on the map permanently and effectively, in addition to an accounting section to adjust drivers' financial accounts and generate weekly and on-demand reports. In addition to many scheduled and distinctive operations in the back-end section that the average user does not see. In addition to many other features that support the project and increase its efficiency.",
+    "storeTitle": "Store",
+    "storeDescription": "An online store to sell different types of products and provide different services within an integrated and effective system."
+  },
+  "contactUs": " Contact us",
+  "contact": {
+    "title": "Get in Touch",
+    "message": "Message is required",
+    "name": "Name is required",
+    "email": {
+      "required": "Email is required",
+      "invalid": "Invalid email address"
+    },
+    "subject": "Subject is required",
+    "send": "Send",
+    "address": {
+      "city": "İstanbul, Turkey.",
+      "address": "Beyoglu, 34433"
+    },
+    "phone": {
+      "number": "+316 377 185 53",
+      "hours": "Mon to Fri 9am to 6pm"
+    },
+    "email_contact": {
+      "email": "skyline6710@gmail.com",
+      "note": "Send us your query anytime!"
+    }
+  }
+}

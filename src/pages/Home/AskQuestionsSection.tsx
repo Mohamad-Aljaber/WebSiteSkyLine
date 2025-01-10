@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 interface Question {
   question: string;
   answer: string;
@@ -29,6 +32,8 @@ const questions: Question[] = [
 ];
 
 const AskQuestionsSection: React.FC = () => {
+  const { t } = useTranslation();
+
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: (i: number) => ({
@@ -40,6 +45,7 @@ const AskQuestionsSection: React.FC = () => {
       },
     }),
   };
+
   return (
     <section
       className="ask-questions section-bg1 section-padding30 fix"
@@ -50,13 +56,8 @@ const AskQuestionsSection: React.FC = () => {
           <div className="col-xl-8 col-lg-9 col-md-10">
             {/* Section Title */}
             <div className="section-tittle text-center mb-90">
-              <h2>Frequently Asked Questions</h2>
-              <p>
-                At Skyline, we offer advanced technological and software
-                solutions to empower your business. From AI-driven systems to
-                cloud services, our expert team is ready to support you every
-                step of the way.
-              </p>
+              <h2>{t("askQuestions.sectionTitle")}</h2>
+              <p>{t("askQuestions.sectionDescription")}</p>
             </div>
           </div>
         </div>
@@ -73,8 +74,8 @@ const AskQuestionsSection: React.FC = () => {
               <div className="single-question d-flex mb-50">
                 <span> Q.</span>
                 <div className="pera">
-                  <h2>{q.question}</h2>
-                  <p>{q.answer}</p>
+                  <h2>{t(`askQuestions.questions.${index}.question`)}</h2>
+                  <p>{t(`askQuestions.questions.${index}.answer`)}</p>
                 </div>
               </div>
             </motion.div>
@@ -83,12 +84,12 @@ const AskQuestionsSection: React.FC = () => {
         <div className="row">
           <div className="col-xl-12">
             <div className="more-btn text-center mt-20">
-              <a
-                href="#"
+              <Link
+                to="content"
                 className="btn"
               >
-                Go to Support
-              </a>
+                {t("askQuestions.buttonText")}
+              </Link>
             </div>
           </div>
         </div>

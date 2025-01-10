@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Slider: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="slider-area slider-bg">
       <div className="single-slider d-flex align-items-center slider-height3">
@@ -12,7 +14,7 @@ const Slider: React.FC = () => {
                   data-animation="fadeInLeft"
                   data-delay=".6s"
                 >
-                  Contact us
+                  {t("contactUs")}
                 </h1>
               </div>
             </div>

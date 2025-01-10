@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Slider: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="slider-area slider-bg">
       {/* Single Slider */}
@@ -13,7 +16,7 @@ const Slider: React.FC = () => {
                   data-animation="fadeInLeft"
                   data-delay=".6s"
                 >
-                  Business Gallery
+                {t("Business")}
                 </h1>
               </div>
             </div>

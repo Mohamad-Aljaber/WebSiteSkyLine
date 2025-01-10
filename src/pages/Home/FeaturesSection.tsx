@@ -6,27 +6,23 @@ import SecurityIcon from "@mui/icons-material/Security";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
 import { motion } from "motion/react";
-
+import MobileFriendlyIcon from "@mui/icons-material/MobileFriendly";
+import { useTranslation } from "react-i18next";
 const secondaryTheme = "#F067FF";
 interface Feature {
-  title: string;
-  description: string;
+  key: string;
   icon: React.ReactNode;
 }
 
 const features: Feature[] = [
   {
-    title: "AI-Powered Systems Development",
-    description:
-      "Developing advanced AI-powered systems to meet your company's needs and enhance efficiency.",
+    key: "ai",
     icon: (
       <MemoryOutlinedIcon sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }} />
     ),
   },
   {
-    title: "Automated Systems for Enterprises",
-    description:
-      "Providing automated systems tailored for organizations and enterprises, ensuring seamless operations.",
+    key: "automated",
     icon: (
       <SettingsOutlinedIcon
         sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }}
@@ -34,23 +30,17 @@ const features: Feature[] = [
     ),
   },
   {
-    title: "Cloud and Technical Services",
-    description:
-      "Enhancing your existing systems with cloud services and advanced technical solutions.",
+    key: "cloud",
     icon: (
       <CloudOutlinedIcon sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }} />
     ),
   },
   {
-    title: "Security Testing Team",
-    description:
-      "Our dedicated security team ensures the safety of your organization’s systems by conducting thorough security tests.",
+    key: "security",
     icon: <SecurityIcon sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }} />,
   },
   {
-    title: "Technology Consulting",
-    description:
-      "Expert consulting services from our specialized engineers to drive innovation in your organization.",
+    key: "consulting",
     icon: (
       <WorkOutlineOutlinedIcon
         sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }}
@@ -58,25 +48,30 @@ const features: Feature[] = [
     ),
   },
   {
-    title: "Marketing & Media Services",
-    description:
-      "Providing marketing and media solutions to enhance your company’s visibility and outreach.",
+    key: "marketing",
     icon: (
       <CampaignOutlinedIcon
         sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }}
       />
     ),
   },
+  {
+    key: "mobile",
+    icon: (
+      <MobileFriendlyIcon sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }} />
+    ),
+  },
 ];
 
 const FeaturesSection: React.FC = () => {
+  const { t } = useTranslation();
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.2,
+        delay: i * 0.1,
         duration: 0.5,
       },
     }),
@@ -90,7 +85,7 @@ const FeaturesSection: React.FC = () => {
         <div className="row justify-content-center">
           <div className="col-xl-12">
             <div className="section-tittle text-center mb-105">
-              <h2>Our Services at Skyline</h2>
+              <h2>{t("services")}</h2>
             </div>
           </div>
         </div>
@@ -109,9 +104,9 @@ const FeaturesSection: React.FC = () => {
                 <div className="cat-icon">{feature.icon}</div>
                 <div className="cat-cap">
                   <h5>
-                    <a href="#">{feature.title}</a>
+                    <div>{t(`features.${feature.key}.title`)}</div>
                   </h5>
-                  <p>{feature.description}</p>
+                  <p>{t(`features.${feature.key}.description`)}</p>
                 </div>
               </div>
             </motion.div>

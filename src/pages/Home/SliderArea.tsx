@@ -2,10 +2,13 @@ import React from "react";
 import { motion } from "motion/react";
 import { useTypewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const SliderArea: React.FC = () => {
+  const { t } = useTranslation();
+
   const [text] = useTypewriter({
-    words: ["Skyline Business Technology Company"],
+    words: [t("slider.title")],
     loop: true,
     typeSpeed: 100,
     deleteSpeed: 50,
@@ -33,35 +36,31 @@ const SliderArea: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
               >
-                <div className="hero__caption mt-70 pt-5">
+                <div className="hero__caption mt-70 pt-5 ">
                   <span
                     data-animation="fadeInLeft"
                     data-delay=".3s"
                   >
-                    The best company to promote your business and increase your
-                    profits
+                    {t("slider.description")}
                   </span>
-
-                  <h1
-                    style={{
-                      fontSize: "40px",
-                    }}
-                    dangerouslySetInnerHTML={{
-                      __html: highlightText(text),
-                    }}
-                  ></h1>
-
+                  <div className="min-h ">
+                    <h1
+                      style={{
+                        fontSize: "40px",
+                      }}
+                      dangerouslySetInnerHTML={{
+                        __html: highlightText(text),
+                      }}
+                    ></h1>
+                  </div>
                   <p
                     data-animation="fadeInLeft"
                     data-delay=".8s"
                   >
-                    Enhance your organization with a strong and advanced
-                    information and media system that increases your customers'
-                    confidence in you. We also help you host your existing
-                    system and provide technical support as well.{" "}
+                    {t("slider.paragraph")}
                   </p>
                   {/* Slider btn */}
-                  <div className="slider-btns">
+                  <div className="slider-btns mb-10">
                     {/* Hero-btn */}
                     <Link
                       data-animation="fadeInLeft"
@@ -69,7 +68,7 @@ const SliderArea: React.FC = () => {
                       to="contact"
                       className="btn radius-btn"
                     >
-                      Start with us
+                      {t("slider.button")}
                     </Link>
                   </div>
                 </div>

@@ -3,8 +3,11 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import MemoryOutlinedIcon from "@mui/icons-material/MemoryOutlined";
 import StackedBarChartOutlinedIcon from "@mui/icons-material/StackedBarChartOutlined";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const AboutSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       className="about-area1 section-padding40"
@@ -29,40 +32,23 @@ const AboutSection: React.FC = () => {
             <div className="about-caption">
               {/* Section Title */}
               <div className="section-tittle section-tittle2 mb-30">
-                <h2 style={{ fontSize: "35px" }}>
-                  Building Systems for Enterprises
-                </h2>
+                <h2 style={{ fontSize: "35px" }}>{t("about.title")}</h2>
               </div>
-              <p className="mb-40">
-                We specialize in building advanced systems for companies aiming
-                to enhance operations, improve management, and optimize
-                resources. Our solutions also integrate artificial intelligence
-                to boost decision-making and streamline processes.
-              </p>
+              <p className="mb-40">{t("about.description")}</p>
               <ul>
                 <li>
                   <SettingsOutlinedIcon sx={{ fontSize: "25px", mr: 1 }} />
-
-                  <p>
-                    Develop advanced systems tailored for your business needs.
-                  </p>
+                  <p>{t("about.points.systemDevelopment")}</p>
                 </li>
                 <li>
                   <StackedBarChartOutlinedIcon
                     sx={{ fontSize: "25px", mr: 1 }}
                   />
-
-                  <p>
-                    Improve management efficiency with intelligent solutions.
-                  </p>
+                  <p>{t("about.points.managementEfficiency")}</p>
                 </li>
                 <li>
                   <MemoryOutlinedIcon sx={{ fontSize: "25px", mr: 1 }} />
-
-                  <p>
-                    Leverage AI to optimize resource allocation and
-                    decision-making.
-                  </p>
+                  <p>{t("about.points.aiOptimization")}</p>
                 </li>
               </ul>
             </div>

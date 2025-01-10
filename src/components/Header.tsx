@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 // تعريف نوع العناصر في القائمة
@@ -28,6 +29,8 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const { t } = useTranslation(); // استخدام الترجمة
+
   return (
     <header>
       <div className="header-area header-transparent">
@@ -47,6 +50,7 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
                     </Link>
                   </div>
                 </div>
+
                 <div className="col-6 d-flex justify-content-end d-lg-none">
                   <button
                     className="mobile-menu-toggle"
@@ -70,37 +74,15 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
                         <ul id="navigation">
                           {menuItems.map((item, index) => (
                             <li key={index}>
-                              {/* {item.path.includes("#") ? (
-                                <a
-                                  href={item.path}
-                                  onClick={e =>
-                                    handleScrollToSection(e, item.path)
-                                  }
-                                >
-                                  {item.name}
-                                </a>
-                              ) : ( */}
-                              <Link to={item.path}>{item.name}</Link>
-                              {/* )} */}
+                              <Link to={item.path}>
+                                {t(
+                                  `menu.${item.name
+                                    .toLowerCase()
+                                    .replace(/\s/g, "_")}`
+                                )}
+                              </Link>
                             </li>
                           ))}
-                          {/* Buttons */}
-                          {/* <li className="button-header margin-left">
-                            <Link
-                              to="/register"
-                              className="btn"
-                            >
-                              Sign Up
-                            </Link>
-                          </li>
-                          <li className="button-header">
-                            <Link
-                              to="/login"
-                              className="btn3"
-                            >
-                              Sign In
-                            </Link>
-                          </li> */}
                         </ul>
                       </nav>
                     </div>
@@ -134,27 +116,23 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
                               href={item.path}
                               onClick={e => handleScrollToSection(e, item.path)}
                             >
-                              {item.name}
+                              {t(
+                                `menu.${item.name
+                                  .toLowerCase()
+                                  .replace(/\s/g, "_")}`
+                              )}
                             </a>
                           ) : (
-                            <Link to={item.path}>{item.name}</Link>
+                            <Link to={item.path}>
+                              {t(
+                                `menu.${item.name
+                                  .toLowerCase()
+                                  .replace(/\s/g, "_")}`
+                              )}
+                            </Link>
                           )}
                         </li>
                       ))}
-                      {/* <li>
-                        <Link
-                          to="/register"
-                          className="btn"
-                        >
-                          Sign Up
-                        </Link>
-                        <Link
-                          to="/login"
-                          className="btn3"
-                        >
-                          Sign In
-                        </Link>
-                      </li> */}
                     </ul>
                   </div>
                 </div>
