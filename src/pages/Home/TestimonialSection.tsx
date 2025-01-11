@@ -80,6 +80,7 @@ const PersonalCards = () => {
         py: { xs: 5, sm: 7, md: 10 },
         pt: { xs: 10, sm: 12, md: 15 },
         color: "#fff",
+        direction: "ltr",
       }}
       id="aboutUs"
     >

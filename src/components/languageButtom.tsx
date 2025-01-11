@@ -20,7 +20,6 @@ export default function SplitButton() {
   const anchorRef = React.useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
-  // قراءة اللغة من الكوكيز عند تحميل الصفحة
   React.useEffect(() => {
     const language = Cookies.get("i18next") || "en";
     i18n.changeLanguage(language);
@@ -31,10 +30,7 @@ export default function SplitButton() {
     console.info(`You clicked ${options[selectedIndex]}`);
   };
 
-  const handleMenuItemClick = (
-    
-    index: number
-  ) => {
+  const handleMenuItemClick = (index: number) => {
     setSelectedIndex(index);
     setOpen(false);
 
@@ -60,7 +56,10 @@ export default function SplitButton() {
 
   return (
     <React.Fragment>
-      <Box mx={1}>
+      <Box
+        mx={1}
+        sx={{ direction: "ltr" }}
+      >
         <ButtonGroup
           variant="outlined"
           ref={anchorRef}
@@ -129,7 +128,7 @@ export default function SplitButton() {
                       <MenuItem
                         key={option}
                         selected={index === selectedIndex}
-                        onClick={() => handleMenuItemClick( index)}
+                        onClick={() => handleMenuItemClick(index)}
                         sx={{ fontSize: "18px" }}
                       >
                         {option}

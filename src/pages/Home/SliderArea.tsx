@@ -3,10 +3,9 @@ import { motion } from "motion/react";
 import { useTypewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
 const SliderArea: React.FC = () => {
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  console.log(i18n.dir());
   const [text] = useTypewriter({
     words: [t("slider.title")],
     loop: true,
@@ -21,10 +20,14 @@ const SliderArea: React.FC = () => {
       "<span style='color: #F067FF;font-size:45px'>Skyline</span>"
     );
   };
+  const textAlignValue = i18n.dir() === "rtl" ? "right" : "left"; // تحديد الاتجاه بناءً على اللغة
 
   return (
     <div className="slider-area slider-bg">
-      <div className="slider-active">
+      <div
+        className="slider-active"
+        style={{ textAlign: textAlignValue }}
+      >
         {/* Single Slider */}
         <div className="single-slider d-flex align-items-center slider-height">
           <div className="container">

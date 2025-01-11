@@ -6,7 +6,8 @@ import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 
 const AboutSection: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
 
   return (
     <motion.div
@@ -28,7 +29,10 @@ const AboutSection: React.FC = () => {
               />
             </div>
           </div>
-          <div className="col-xl-7 col-lg-7 col-md-12">
+          <div
+            className="col-xl-7 col-lg-7 col-md-12"
+            style={{ textAlign: textAlignValue }}
+          >
             <div className="about-caption">
               {/* Section Title */}
               <div className="section-tittle section-tittle2 mb-30">

@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 import Slider from "./Slider";
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Business Gallery", path: "/business-gallery" },
@@ -18,8 +18,10 @@ const Contact = () => {
     { name: t("footer.quickLinksList.3.name"), to: "/#services" },
     { name: t("footer.quickLinksList.4.name"), to: "/contact" },
   ];
+  const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
+
   return (
-    <div style={{ overflow: "hidden" }}>
+    <div style={{ overflow: "hidden", textAlign: textAlignValue }}>
       <Header menuItems={menuItems} />
       <Slider />
       <ContactForm />

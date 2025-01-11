@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 import SplitButton from "./languageButtom";
+
 
 interface MenuItem {
   name: string;
@@ -30,8 +31,8 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const { t } = useTranslation(); // استخدام الترجمة
-
+  const { t } = useTranslation();
+ 
   return (
     <header>
       <div className="header-area header-transparent">

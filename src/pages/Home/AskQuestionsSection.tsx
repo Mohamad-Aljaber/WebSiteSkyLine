@@ -32,7 +32,7 @@ const questions: Question[] = [
 ];
 
 const AskQuestionsSection: React.FC = () => {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
 
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
@@ -45,6 +45,7 @@ const AskQuestionsSection: React.FC = () => {
       },
     }),
   };
+  const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
 
   return (
     <section
@@ -61,7 +62,8 @@ const AskQuestionsSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row"             style={{ textAlign: textAlignValue }}
+        >
           {questions.map((question,index) => (
             <motion.div
               key={question.question }

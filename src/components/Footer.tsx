@@ -59,7 +59,7 @@ const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
   quickLinks,
 }) => {
   const [email, setEmail] = useState("");
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -87,12 +87,16 @@ const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
     { name: t("footer.servicesList.4.name"), to: "/marketing-media" },
     { name: t("footer.servicesList.5.name"), to: "" },
   ];
+  const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
 
   return (
     <footer>
       <div
         className="footer-wrappr"
-        style={{ backgroundImage: "url('assets/img/gallery/footer-bg.png')" }}
+        style={{
+          backgroundImage: "url('assets/img/gallery/footer-bg.png')",
+          textAlign: textAlignValue,
+        }}
       >
         <div className="footer-area footer-padding">
           <div className="container">

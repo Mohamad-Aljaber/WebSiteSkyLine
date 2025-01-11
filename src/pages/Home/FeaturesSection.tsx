@@ -64,7 +64,7 @@ const features: Feature[] = [
 ];
 
 const FeaturesSection: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: (i: number) => ({
@@ -76,10 +76,13 @@ const FeaturesSection: React.FC = () => {
       },
     }),
   };
+  const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
+
   return (
     <section
       className="team-area section-bg1"
       id="services"
+      style={{ textAlign: textAlignValue }}
     >
       <div className="container">
         <div className="row justify-content-center">

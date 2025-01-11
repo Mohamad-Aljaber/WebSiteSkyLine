@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 import BlogItem from "./BlogItem";
 // import BlogPagination from "./BlogPagination";
 
@@ -7,7 +7,7 @@ import ProjectPhotos from "./ProjectPhotos.tsx";
 import TagCloudWidget from "./TagCloudWidget.tsx";
 
 const BlogSection: React.FC = () => {
-  const { t } = useTranslation(); 
+  const { t, i18n } = useTranslation();
 
   const blogItemsData = [
     {
@@ -32,12 +32,16 @@ const BlogSection: React.FC = () => {
       descriptionKey: t("blog.storeDescription"),
     },
   ];
+  const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
 
   return (
     <section className="blog_area section-padding">
       <div className="container">
         <div className="row">
-          <div className="col-lg-8 mb-5 mb-lg-0">
+          <div
+            className="col-lg-8 mb-5 mb-lg-0"
+            style={{ textAlign: textAlignValue }}
+          >
             <div className="blog_left_sidebar">
               {blogItemsData.map((item, index) => (
                 <BlogItem
