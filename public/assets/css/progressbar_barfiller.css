@@ -2,26 +2,6 @@
 .single-skill {
   display: flex;
 }
-.min-h {
-  min-height: 250px;
-  color: red;
-}
-
-@media (min-width: 768px) {
-  .min-h {
-    min-height: 150px;
-  }
-}
-@media (min-width: 1024px) {
-  .min-h {
-    min-height: 180px;
-  }
-}
-@media (min-width: 1440px) {
-  .min-h {
-    min-height: 150px;
-  }
-}
 .single-skill span {
   color: #79838b;
   font-size: 13px;
