@@ -84,7 +84,7 @@ const FeaturesSection: React.FC = () => {
       id="services"
       style={{ textAlign: textAlignValue }}
     >
-      <div className="container">
+      <div className="container ">
         <div className="row justify-content-center">
           <div className="col-xl-12">
             <div className="section-tittle text-center mb-105">
@@ -114,6 +114,33 @@ const FeaturesSection: React.FC = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+        <div className="section-tittle text-center mb-50">
+          <h2>{t("service2")}</h2>
+        </div>
+        <div style={{ color: "#A5A7C5" }}>
+          <p style={{ color: "#A5A7C5", fontSize: "20px" }}>
+            {t("company.about")}
+          </p>
+          <p style={{ color: "#A5A7C5", fontSize: "20px" }}>
+            {t("company.commitment")}
+          </p>
+          <ol
+            style={{
+              listStyleType: "inherit",
+              lineHeight: 2,
+              color: "#fff",
+              paddingBottom: "50px",
+            }}
+          >
+            <li>{t("company.features.ai_integration")}</li>
+            <li>{t("company.features.flexible_projects")}</li>
+            <li>{t("company.features.modern_ui")}</li>
+            <li>{t("company.features.customer_support")}</li>
+            <li>{t("company.features.maintenance_support")}</li>
+            <li>{t("company.features.continuous_updates")}</li>
+            <li>{t("company.features.modern_tech")}</li>
+          </ol>
         </div>
       </div>
     </section>

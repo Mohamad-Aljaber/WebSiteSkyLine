@@ -2,12 +2,18 @@ import React from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9af71d5 (Editar secciones personales)
 interface Question {
   question: string;
   answer: string;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9af71d5 (Editar secciones personales)
 const questions: Question[] = [
   {
     question: "How can AI improve my company's operations?",
